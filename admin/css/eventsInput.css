@@ -1,0 +1,27 @@
+body {
+  background: #eee;
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  margin-top: 2%;
+  text-align: center;
+}
+
+form {
+  width: 280px;
+  margin: 7% auto;
+}
+
+input {
+  width: 240px;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.submitBtn {
+  position: absolute;
+  width: 220px;
+  margin: 2% 2.5%;
+}

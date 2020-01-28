@@ -1,0 +1,27 @@
+<?php require('../lib/auth.inc.php');?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/manageEvents.css">
+  <title>Manage Events</title>
+</head>
+
+<body>
+  <table>
+    <th><a href="?order=idEvent">Id Event</a></th>
+    <th><a href="?order=name">Name</a></th>
+    <th><a href="?order=details">Details</a></th>
+    <th><a href="?order=date">Date</a></th>
+    <th colspan="2">Actions</th>
+    <?php include('../php/buildDataTable.php');?>
+
+  </table>
+</body>
+
+</html>

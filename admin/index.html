@@ -1,0 +1,35 @@
+<?php 
+include('./lib/auth.inc.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/admin.css">
+  <link rel="stylesheet" href="../css/calendar.css">
+  <title>Admin</title>
+</head>
+
+<body>
+  <a href="./php/logout.php" class="logout" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
+  <h1>Admin Page</h1>
+
+  <ul class="mainMenu">
+    <li><a href="pages/listEvents.html">List All Events</a></li>
+    <li><a href="pages/manageEvents.html">Manage Events</a></li>
+    <li><a href="pages/addEvents.html">Add Events</a></li>
+  </ul>
+
+  <div class="calendar">
+    <table>
+      <?php require('../php/generateCalendar.php') ?>
+    </table>
+  </div>
+
+</body>
+
+</html>

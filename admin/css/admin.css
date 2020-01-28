@@ -1,0 +1,76 @@
+body {
+  background: #ccc;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-left: 130px;
+  /* 80width + 30margin + 10*2padding from logout */
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  text-align: center;
+  list-style: none;
+  flex: .5;
+}
+
+li a:hover {
+  color: #fff;
+}
+
+li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.mainMenu {
+  background: rgb(180, 168, 0);
+  padding: 15px 0;
+  margin: 0;
+}
+
+.calendar {
+  width: 100%;
+  margin: 5% 39%;
+}
+
+form {
+  width: 220px;
+  margin: 18% auto;
+}
+
+input {
+  width: 180px;
+  margin-bottom: 5%;
+}
+
+.submitBtn {
+  width: 120px;
+  position: absolute;
+  margin: 1% 4%;
+}
+
+.logout {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  width: 80px;
+  float: right;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 7px;
+}
+
+.logout:hover {
+  background: #f00;
+  color: #fff;
+}

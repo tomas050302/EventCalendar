@@ -1,0 +1,33 @@
+table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+
+td {
+  height: 38px;
+  width: 38px;
+}
+
+.heading {
+  font-weight: bold;
+  background: #09f;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.empty {
+  background: #ccc;
+}
+
+.today {
+  background: #f00;
+}
+
+.event>a {
+  display: block;
+  background: #ff0;
+}

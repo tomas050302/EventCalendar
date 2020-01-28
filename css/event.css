@@ -1,0 +1,39 @@
+.eventDetails+.eventDetails {
+  margin-top: 1%;
+}
+
+.eventDetails {
+  height: 20%;
+  margin: 5% 400px 0;
+  width: 500px;
+  border: 1px #000 solid;
+  padding: 5px 20px 35px 35px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+span {
+  font-size: 18px;
+  margin-left: 3%;
+  margin-top: -8px;
+  position: absolute;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.title {
+  position: absolute;
+  margin: 2% 28% 0 28%;
+}
+
+.dateOfEvent {
+  font-size: 15px;
+  position: absolute;
+  margin-left: 1.5%;
+  margin-top: -12px;
+  color: #333;
+}

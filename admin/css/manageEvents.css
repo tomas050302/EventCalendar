@@ -1,0 +1,38 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+table {
+  width: 90%;
+  margin: 4% auto;
+  border-collapse: collapse;
+}
+
+td, th, tr {
+  height: 38px;
+  border: 1px solid #000;
+}
+
+span {
+  padding-left: 8px;
+}
+
+th {
+  background: #eaeaea;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.submitButton {
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  margin: 0 40%;
+}
