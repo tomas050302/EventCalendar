@@ -1,6 +1,5 @@
 <?php
-require('/opt/lampp/htdocs/calendario/php/lib/settings.inc.php');
-require($dir_site . 'php/lib/functions.lib.php');
+require_once '../../php/lib/settings.inc.php';
 
 $command = 'SELECT * FROM events ORDER BY date;';
 $result = query($command);

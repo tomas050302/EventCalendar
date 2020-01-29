@@ -10,7 +10,7 @@ function printLine($array)
 
 function query($command)
 {
-  require('/opt/lampp/htdocs/calendario/php/lib/settings.inc.php');
+  require('settings.inc.php');
   require($dir_site . '/php/lib/connection.lib.php');
 
   $result = $connection->query($command);

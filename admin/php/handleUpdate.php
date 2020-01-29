@@ -6,9 +6,9 @@ $date = $_POST['date'];
 
 $command = 'UPDATE events SET idEvent=' . $idEvent . ', name="' . $name . '", details="' . $details . '", date="' . $date . '" WHERE idEvent=' . $idEvent . ';';
 
-require('../../php/lib/functions.lib.php');
+require_once '../../php/lib/settings.inc.php';
 
 if (query($command)) {
+  echo ('<h1>Event Updated successfully</h1>');
   header("Refresh:.5; url=../pages/manageEvents.html");
-  echo ('Event Updated successfully');
 }

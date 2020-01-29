@@ -2,7 +2,7 @@
 if (isset($_GET['id'])) {
   $idEvent = $_GET['id'];
 
-  require('../../php/lib/functions.lib.php');
+  require_once '../../php/lib/settings.inc.php';
 
   $command = 'DELETE FROM events WHERE idEvent = ' . $idEvent . ';';
   query($command);

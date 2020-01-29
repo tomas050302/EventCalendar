@@ -32,7 +32,6 @@
           <input class="dateInput" name="date" type="date" value="' . $line['date'] . '"></input><br>
           <input class="submitBtn" type="submit" value="Save">
       ');
-        // TODO: Of the ones stored in the DB and then have submit button to UPDATE 
       }
     } else {
       echo ("You're not authorized in this page!");

@@ -1,5 +1,5 @@
 <?php
-require('../../php/lib/functions.lib.php');
+require_once '../../php/lib/settings.inc.php';
 
 # Script to use FontAwsome Icons
 echo ('<script src="https://kit.fontawesome.com/729ca500a9.js" crossorigin="anonymous"></script>');
@@ -19,14 +19,7 @@ foreach ($result as $key => $line) {
       <td><span>' . $line['details'] . '</span></td>
       <td class="centered"><span>' . $formatedDate . '</span></td>
       <td class="centered"><a href="manageEvents.php?id=' . $line['idEvent'] . '" class="delete"><i class="fas fa-edit"></i></a></td>
-      <td class="centered"><a href="../php/deleteEvent.php?id=' . $line['idEvent'] . '" onclick="');
-  onClickMessage(); //? When using just the quotes it was splitting it weirdly :/
-  echo ('"><i class="fas fa-trash"></i></a></td>
+      <td class="centered"><a href="../php/deleteEvent.php?id=' . $line['idEvent'] . '" onclick="return confirm(\'Are you sure you want to delete this record?\');"><i class="fas fa-trash"></i></a></td>
     </tr>
   ');
-}
-
-function onClickMessage()
-{
-  echo ("return confirm('Are you sure you want to delete this record?');");
 }

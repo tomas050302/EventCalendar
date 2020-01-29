@@ -2,6 +2,6 @@
 @session_start();
 
 if (!isset($_SESSION['isLogged'])) {
-  header('location: login.php');
+  header('location: login.html');
   exit;
 }

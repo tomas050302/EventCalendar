@@ -1,13 +1,17 @@
 <?php
-$name = $_POST['name'];
-$description = $_POST['description'];
-$date = $_POST['date'];
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $description = $_POST['description'];
+  $date = $_POST['date'];
 
-require('../../php/lib/functions.lib.php');
+  require_once '../../php/lib/settings.inc.php';
 
-$command = 'INSERT INTO events (name, details, date) VALUES ("' . $name . '", "' . $description . '", "' . $date . '");';
+  $command = 'INSERT INTO events (name, details, date) VALUES ("' . $name . '", "' . $description . '", "' . $date . '");';
 
-if (query($command)) {
-  echo ("<h1>Event added with success</h1>");
-  header("Refresh:1; url=../admin.html");
+  if (query($command)) {
+    echo ("<h1>Event added with success</h1>");
+    header("Refresh:1; url=../index.html");
+  }
+} else {
+  echo 'Forbidden route!';
 }

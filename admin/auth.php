@@ -1,5 +1,5 @@
 <?php
-require_once('../php/lib/functions.lib.php');
+require_once('../php/lib/settings.inc.php');
 session_start();
 
 $username = $_POST['username'];

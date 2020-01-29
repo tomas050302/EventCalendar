@@ -1,6 +1,5 @@
 <?php
-require('/opt/lampp/htdocs/calendario/php/lib/settings.inc.php');
-require_once($dir_site . 'php/lib/functions.lib.php');
+require('lib/settings.inc.php');
 
 $month = isset($_GET['month']) ? $_GET['month'] : date('n');
 $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
@@ -22,7 +21,7 @@ function getEventsOfMonth($month, $year, $nDaysOfMonth)
   $initialDate = $year . '-' . $month . '-1';
   $endingDate = $year . '-' . $month . '-' . $nDaysOfMonth;
 
-  $string = 'SELECT DISTINCT date FROM events WHERE date > "' . $initialDate . '" AND date < "' . $endingDate . '";';
+  $string = 'SELECT DISTINCT date FROM events WHERE date >= "' . $initialDate . '" AND date <= "' . $endingDate . '";';
 
   return query($string);
 }
@@ -98,7 +97,7 @@ function buildDaysOfMonth($month, $monthStartDay, $nDaysOfMonth, $today, $events
 
     foreach ($eventDays as $key => $eventDay) {
       if ($i == $eventDay) {
-        if ($i == $today) {
+        if ($i == $today && $month == date('n')) {
           echo '<td class="today event"><a href="?year=' . $year . '&month=' . $month . '&day=' . $i . '">';
         } else {
           echo '<td class="event"><a href="?year=' . $year . '&month=' . $month . '&day=' . $i . '">';

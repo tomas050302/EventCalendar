@@ -1,5 +1,5 @@
 <?php
-require_once './php/lib/functions.lib.php';
+require_once 'lib/functions.lib.php';
 
 $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
 $month = isset($_GET['month']) ? $_GET['month'] : date('n');
@@ -14,7 +14,7 @@ $query = query($command);
 $initialDate = $year . '-' . $month . '-1';
 $endingDate = $year . '-' . $month . '-' . $nDaysOfMonth;
 
-$command = 'SELECT * FROM events WHERE date > "' . $initialDate . '" AND date < "' . $endingDate . '";';
+$command = 'SELECT * FROM events WHERE date >= "' . $initialDate . '" AND date <= "' . $endingDate . '";';
 $res = query($command);
 
 $nEvents = numRows($res);
@@ -33,7 +33,7 @@ if ($day != 0) {
 } elseif ($nEvents > 0) {
   $nDaysOfMonth = date('t', mktime(0, 0, 0, $month, 1, $year));
 
-  $string = 'SELECT * FROM events WHERE date > "' . $initialDate . '" AND date < "' . $endingDate . '" ORDER BY date;';
+  $string = 'SELECT * FROM events WHERE date >= "' . $initialDate . '" AND date <= "' . $endingDate . '" ORDER BY date;';
   $result = query($string);
 
   echo '<h1 class="title">Events of ' . date('F', mktime(0, 0, 0, $month, 1, $year)) . '</h1>';
